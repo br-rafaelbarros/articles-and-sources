@@ -7,6 +7,7 @@
 [🔗 Read](./solid/2-ocp.md)
 
 ### Liskov Substitution Principle (LSP)
+[🔗 Read](./solid/3-lsp.md)
 
 ### Interface Segregation Principle (ISP)
 
