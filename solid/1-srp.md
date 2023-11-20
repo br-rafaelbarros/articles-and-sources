@@ -78,6 +78,9 @@ Bem para finalizar esse primeiro princípio, se concentre apenas neste conceito 
 
 # ENGLISH
 
+[![Brazilian Portuguese](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/32px-Flag_of_Brazil.svg.png) Leia em Protuguês BR](#princípio-de-responsabilidade-única) | 
+[![English](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/32px-Flag_of_the_United_States.svg.png) Read in English US](#single-responsibility-principle)
+
 # Single Responsibility Principle
 
 The 'S' principle, in my opinion, is the easiest to understand. Essentially, it guides development by segregating steps during a flow according to their functionality. For example, let's imagine a feature that performs a balance withdrawal, named `performWithdraw`. The execution flow goes as follows:

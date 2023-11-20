@@ -4,6 +4,7 @@
 [🔗 Read](./solid/1-srp.md)
 
 ### Open-Closed Principle (OCP)
+[🔗 Read](./solid/2-ocp.md)
 
 ### Liskov Substitution Principle (LSP)
 
