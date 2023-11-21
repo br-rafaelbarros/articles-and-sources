@@ -20,6 +20,7 @@ The purpose is to group and demonstrate knowledge on the subject, so if there is
 [🔗 Read](./solid/3-lsp.md)
 
 ### Interface Segregation Principle (ISP)
+[🔗 Read](./solid/4-isp.md)
 
 ### Dependency Inversion Principle (DIP)
 
