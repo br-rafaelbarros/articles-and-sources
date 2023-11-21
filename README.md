@@ -23,4 +23,4 @@ The purpose is to group and demonstrate knowledge on the subject, so if there is
 [🔗 Read](./solid/4-isp.md)
 
 ### Dependency Inversion Principle (DIP)
-
+[🔗 Read](./solid/5-dip.md)
