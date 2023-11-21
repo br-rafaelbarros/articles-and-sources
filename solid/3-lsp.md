@@ -7,7 +7,7 @@
 
 # Princípio de Substituição de Liskov
 
-Caso queira seguie a sequência de estudos, leia o conteúdo do princípio SRP [clique aqui](./1-srp.md). Ou aproveite a leitura! 
+Caso queira seguir a sequência de estudos, leia o conteúdo do princípio SRP [clique aqui](./1-srp.md). Ou aproveite a leitura! 
 
 O princípio de substituição de Liskov resumidamente diz que as classes derivadas devem ser substituíveis por suas classes bases. Isso significa que uma classe derivada deve ser capaz de substituir sua classe base sem quebrar o comportamento do programa. Um complemento dos fatores anteriores mas na minha opnião muito difícil de ser aplicado sem prejuízo de quebra de funcionametos do sistema se for aplicado após o sistema já estar em produção com uma certa maturidade, digo maturidade no contexto de tempo de evolução sem quebra de funcionalidades.
 Para aplicar de uma forma bem implementada esse príncípio é necessário um nível de abstração de segregação de responsabilidades muito alto, para evitar refactors ou ajustes na estrutura no futuro.

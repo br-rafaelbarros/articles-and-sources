@@ -7,7 +7,7 @@
 
 # Princípio de Segregação de Interfaces
 
-Caso queira seguie a sequência de estudos, leia o conteúdo do princípio SRP [clique aqui](./1-srp.md). Ou aproveite a leitura! 
+Caso queira seguir a sequência de estudos, leia o conteúdo do princípio SRP [clique aqui](./1-srp.md). Ou aproveite a leitura! 
 
 Este princípio é bem claro até no nome, a idéia dele é que deve ser criado interfaces o mais enxutas possíveis, ou seja, interfaces com somente os métodos necessários para a classe que a implementa, quanto mais específica a interface, melhor.
 Como tenho mantido a mesma estrutura de exemplo, vamos manter o cenário de saque de uma conta bancária. Neste caso teriamos uma classe `Card` que implementa a interface `Operation` 
