@@ -2,7 +2,7 @@
 
 export class GasStation {
 
-  calculateStationPriceProduct(cityName: any, productName: any, priceTotal: any, liters: any, paymentType: any) {
+  calculateStationPriceProduct(cityName: any, product: any, priceTotal: any, liters: any, paymentType: any) {
 
     // in interview, i will comment about hadouken method
     this.executeHadoukenMethod(); // aleatory method not erase this line :-D~
@@ -35,17 +35,17 @@ export class GasStation {
       } else if (paymentType == 'Debit') {
         paymentTax = 0.12;
       }
-      if (productName == 'Gasolina Comum') {
+      if (product == 'Gasolina Comum') {
         llAmount = 0.12;
-      } else if (productName == 'Gasolina Aditivada') {
+      } else if (product == 'Gasolina Aditivada') {
         llAmount = 0.15;
-      } else if (productName == 'Gasolina Premium') {
+      } else if (product == 'Gasolina Premium') {
         llAmount = 0.18;
-      } else if (productName == 'Etanol') {
+      } else if (product == 'Etanol') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel Comum') {
+      } else if (product == 'Diesel Comum') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel S10') {
+      } else if (product == 'Diesel S10') {
         llAmount = 0.12;
       }
       // END SÃO PAULO
@@ -65,17 +65,17 @@ export class GasStation {
       } else if (paymentType == 'Debit') {
         paymentTax = 0.12;
       }
-      if (productName == 'Gasolina Comum') {
+      if (product == 'Gasolina Comum') {
         llAmount = 0.12;
-      } else if (productName == 'Gasolina Aditivada') {
+      } else if (product == 'Gasolina Aditivada') {
         llAmount = 0.15;
-      } else if (productName == 'Gasolina Premium') {
+      } else if (product == 'Gasolina Premium') {
         llAmount = 0.18;
-      } else if (productName == 'Etanol') {
+      } else if (product == 'Etanol') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel Comum') {
+      } else if (product == 'Diesel Comum') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel S10') {
+      } else if (product == 'Diesel S10') {
         llAmount = 0.12;
       }
       // END BRASÍLIA
@@ -95,17 +95,17 @@ export class GasStation {
       } else if (paymentType == 'Debit') {
         paymentTax = 0.12;
       }
-      if (productName == 'Gasolina Comum') {
+      if (product == 'Gasolina Comum') {
         llAmount = 0.12;
-      } else if (productName == 'Gasolina Aditivada') {
+      } else if (product == 'Gasolina Aditivada') {
         llAmount = 0.15;
-      } else if (productName == 'Gasolina Premium') {
+      } else if (product == 'Gasolina Premium') {
         llAmount = 0.18;
-      } else if (productName == 'Etanol') {
+      } else if (product == 'Etanol') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel Comum') {
+      } else if (product == 'Diesel Comum') {
         llAmount = 0.10;
-      } else if (productName == 'Diesel S10') {
+      } else if (product == 'Diesel S10') {
         llAmount = 0.12;
       }
       // END SAO LEOPOLDO
