@@ -1,6 +1,7 @@
-import { CITIES_WITH_STATIONS, CityTaxes, GasStationRepositoryMock } from "../gas-station.repository-mock"
+import { CityTaxes, GasStationRepositoryMock } from "../gas-station.repository-mock"
+import { ITaxes } from "./taxes.interface"
 
-export class CityTaxesService implements Taxes {
+export class CityTaxesService implements ITaxes {
 
   repository: GasStationRepositoryMock
   amountValue: number
@@ -17,9 +18,8 @@ export class CityTaxesService implements Taxes {
 
   calcAmountTax(): number {
 
-    const city: CITIES_WITH_STATIONS = CITIES_WITH_STATIONS[this.cityName]
-
-    const cityTaxes: CityTaxes = this.repository.getCityTaxes(city)
+    const city: CityTaxes = this.repository.getCityByName(this.cityName)
+    const cityTaxes: CityTaxes = this.repository.getCityTaxes(city.name)
 
     let amountTax: number = 0
 

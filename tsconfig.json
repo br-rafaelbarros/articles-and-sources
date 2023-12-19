@@ -1,0 +1,17 @@
+{
+  "compileOnSave":false,
+  "compilerOptions":{
+    "target":"es6",
+     "module":"ESNext",
+     "strict":true,
+     "esModuleInterop": true,
+     "moduleResolution":"node",
+     "outDir": "./dist",
+     "rootDir": "./",
+     "lib":[
+        "ES2020",
+        "dom"
+     ],
+  }
+
+}

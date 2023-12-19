@@ -36,19 +36,19 @@ export const mapCityPercentTaxes: Map<CITIES_WITH_STATIONS, CityTaxes> = new Map
   [CITIES_WITH_STATIONS.SAO_PAULO, {
     name: CITIES_WITH_STATIONS.SAO_PAULO,
     state: STATES_WITH_STATIONS.SAO_PAULO,
-    taxes: new Map([[CITY_TAXES.ISS, 0.5]])
+    taxes: new Map([[CITY_TAXES.ISS, 0.05]])
 
   }],
   [CITIES_WITH_STATIONS.BRASILIA, {
     name: CITIES_WITH_STATIONS.BRASILIA,
     state: STATES_WITH_STATIONS.DISTRICT_FEDERAL,
-    taxes: new Map([[CITY_TAXES.ISS, 0.4]])
+    taxes: new Map([[CITY_TAXES.ISS, 0.04]])
 
   }],
   [CITIES_WITH_STATIONS.PORTO_ALEGRE, {
     name: CITIES_WITH_STATIONS.PORTO_ALEGRE,
     state: STATES_WITH_STATIONS.RIO_GRANDE_DO_SUL,
-    taxes: new Map([[CITY_TAXES.ISS, 0.6]])
+    taxes: new Map([[CITY_TAXES.ISS, 0.06]])
 
   }]
 ])
@@ -59,21 +59,21 @@ export const mapStatePercentTaxes: Map<STATES_WITH_STATIONS, Taxes<STATES_TAXES>
       [STATES_TAXES.ICMS, 0.25],
       [STATES_TAXES.PIS, 1.65],
       [STATES_TAXES.COFINS, 7.6],
-      [STATES_TAXES.CIDE, 0.1]
+      [STATES_TAXES.CIDE, 0.01]
     ])
     ],
     [STATES_WITH_STATIONS.DISTRICT_FEDERAL, new Map([
       [STATES_TAXES.ICMS, 0.29],
       [STATES_TAXES.PIS, 1.35],
       [STATES_TAXES.COFINS, 7.0],
-      [STATES_TAXES.CIDE, 0.2]
+      [STATES_TAXES.CIDE, 0.02]
     ])
     ],
     [STATES_WITH_STATIONS.RIO_GRANDE_DO_SUL, new Map([
-      [STATES_TAXES.ICMS, 0.3],
+      [STATES_TAXES.ICMS, 0.03],
       [STATES_TAXES.PIS, 1.65],
       [STATES_TAXES.COFINS, 7.6],
-      [STATES_TAXES.CIDE, 0.1]
+      [STATES_TAXES.CIDE, 0.01]
     ])
     ]
   ])
@@ -100,8 +100,13 @@ export class GasStationRepositoryMock {
 
   public getCityByName(cityName: string): CityTaxes {
 
-    const city: CITIES_WITH_STATIONS = CITIES_WITH_STATIONS[cityName]
-    const cityReturn = mapCityPercentTaxes.get(city)
+    const cityFound: CITIES_WITH_STATIONS | undefined = Object.values(CITIES_WITH_STATIONS).find(city => city === cityName)
+
+    if (!cityFound) {
+      throw new Error('City not found')
+    }
+
+    const cityReturn = mapCityPercentTaxes.get(cityFound)
     if (!cityReturn) {
       throw new Error('City not found')
     }
@@ -117,18 +122,26 @@ export class GasStationRepositoryMock {
   }
 
   public getProfitProduct(product: string): number {
-    return PercentProfitProducts[product]
+    const productObject = Object.values(PERCENT_PROFIT_PRODUCT).find(product => product === product)
+    if (!productObject) {
+      throw new Error('Product not found')
+    }
+    const percentProfitReturn = mapProductPercentTaxes.get(productObject)
+    if (!percentProfitReturn) {
+      throw new Error('Product not found')
+    }
+    return percentProfitReturn
   }
 
 }
 
-export enum PercentProfitProducts {
-  GASOLINA_COMUM = 0.12,
-  GASOLINA_ADITIVADA = 0.15,
-  GASOLINA_PREMIUM = 0.18,
-  ETANOL = 0.10,
-  DIESEL_COMUM = 0.10,
-  DIESEL_S10 = 0.12
+export enum PERCENT_PROFIT_PRODUCT {
+  GASOLINA_COMUM = 'gasolina comum',
+  GASOLINA_ADITIVADA = 'gasolina aditivada',
+  GASOLINA_PREMIUM = 'gasolina premium',
+  ETANOL = 'etanol',
+  DIESEL_COMUM = 'diesel comum',
+  DIESEL_S10 = 'diesel s10'
 }
 
 export enum PAYMENT_TYPES {
@@ -141,4 +154,13 @@ export const mapPaymentPercentTaxes: Map<PAYMENT_TYPES, number> = new Map([
   [PAYMENT_TYPES.CASH, 0.05],
   [PAYMENT_TYPES.CREDIT, 0.15],
   [PAYMENT_TYPES.DEBIT, 0.12]
+])
+
+export const mapProductPercentTaxes: Map<PERCENT_PROFIT_PRODUCT, number> = new Map([
+  [PERCENT_PROFIT_PRODUCT.GASOLINA_COMUM, 0.12],
+  [PERCENT_PROFIT_PRODUCT.GASOLINA_ADITIVADA, 0.15],
+  [PERCENT_PROFIT_PRODUCT.GASOLINA_PREMIUM, 0.18],
+  [PERCENT_PROFIT_PRODUCT.ETANOL, 0.10],
+  [PERCENT_PROFIT_PRODUCT.DIESEL_COMUM, 0.10],
+  [PERCENT_PROFIT_PRODUCT.DIESEL_S10, 0.12]
 ])

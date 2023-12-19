@@ -1,4 +1,5 @@
 import { GasStationRepositoryMock } from "../gas-station.repository-mock"
+import { ITaxes } from "./taxes.interface"
 
 export class ProfitTaxesService implements ITaxes {
 

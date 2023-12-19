@@ -1,4 +1,4 @@
-interface ITaxes {
+export interface ITaxes {
 
   amountValue: number
 

@@ -1,4 +1,5 @@
 import { CityTaxes, GasStationRepositoryMock, STATES_TAXES, Taxes as TaxesGeneric } from "../gas-station.repository-mock"
+import { ITaxes } from "./taxes.interface"
 
 export class StateTaxesService implements ITaxes {
 

@@ -1,4 +1,5 @@
 import { GasStationRepositoryMock, PAYMENT_TYPES } from "../gas-station.repository-mock"
+import { ITaxes } from "./taxes.interface"
 
 export class PaymentTypeTaxesService implements ITaxes {
 
@@ -19,7 +20,7 @@ export class PaymentTypeTaxesService implements ITaxes {
 
     let amountTax: number = 0
 
-    const paymentTypeValid: PAYMENT_TYPES = PAYMENT_TYPES[this.paymentType]
+    const paymentTypeValid: PAYMENT_TYPES | undefined = Object.values(PAYMENT_TYPES).find(payment => payment === this.paymentType)
     if (!paymentTypeValid) {
       throw new Error('Payment type not found')
     }
