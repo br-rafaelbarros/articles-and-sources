@@ -8,19 +8,16 @@ The purpose is to group and demonstrate knowledge on the subject, so if there is
 
 
 ---
+## Clean Code Practices
+
+### [🔗 Read The problem](./clean-code/README.md)
+#### [🔗 Read the solution - Bad practices](./clean-code/bad_solution/README.md)
+#### [🔗 Read the solution - Good practices](./clean-code/good_solution/README.md)
+
 ## SOLID Principles
 
-### Single Responsibility Principle (SRP)
-[🔗 Read](./solid/1-srp.md)
-
-### Open-Closed Principle (OCP)
-[🔗 Read](./solid/2-ocp.md)
-
-### Liskov Substitution Principle (LSP)
-[🔗 Read](./solid/3-lsp.md)
-
-### Interface Segregation Principle (ISP)
-[🔗 Read](./solid/4-isp.md)
-
-### Dependency Inversion Principle (DIP)
-[🔗 Read](./solid/5-dip.md)
+### [🔗 Read Single Responsibility Principle (SRP)](./solid/1-srp.md)
+### [🔗 Read Open-Closed Principle (OCP)](./solid/2-ocp.md)
+### [🔗 Read Liskov Substitution Principle (LSP)](./solid/3-lsp.md)
+### [🔗 Read  Interface Segregation Principle (ISP)](./solid/4-isp.md)
+### [🔗 Read Dependency Inversion Principle (DIP)](./solid/5-dip.md)

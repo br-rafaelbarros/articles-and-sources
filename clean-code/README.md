@@ -2,6 +2,10 @@
 [![Brazilian Portuguese](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/32px-Flag_of_Brazil.svg.png) Leia em Protuguês BR](#o-problema)  | 
 [![English](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/32px-Flag_of_the_United_States.svg.png) Read in English US](#the-problem)
 
+- add here link to topics
+- link to good soluction
+- link to bad soluction
+
 
 # The problem
 
@@ -65,7 +69,9 @@
 #
 #
 #
-  
+- add here link to topics
+- link to good soluction
+- link to bad soluction 
 
 # O problema
 
