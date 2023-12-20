@@ -20,8 +20,8 @@ export class GasStationService {
       new ProfitTaxesService(payload.productName, payload.productPrice),
     ]
 
-    let finalPrice: number = taxesServiceList.reduce((acc: number, taxesService: ITaxes) => {
-      return acc + taxesService.calcAmountTax()
+    let finalPrice: number = taxesServiceList.reduce((total: number, taxesService: ITaxes) => {
+      return total + taxesService.calcAmountTax()
     }, 0)
 
     return finalPrice
